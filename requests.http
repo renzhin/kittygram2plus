@@ -1,0 +1,218 @@
+# Применение JWT
+
+POST http://127.0.0.1:8000/auth/users/
+Content-Type: application/json
+
+{
+    "username": "renzhin",
+    "password": "Qwerty@1"
+}
+
+
+###
+# Применение JWT - получение токена
+
+POST http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "renzhin",
+    "password": "Qwerty@1"
+}
+
+###
+# Применение JWT - получение токена
+
+POST http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "Vinni",
+    "password": "Qwerty@1"
+}
+
+###
+# Vinni пример GET запроса с JWT-токеном
+GET http://127.0.0.1:8000/auth/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1NDQ2NTkwLCJqdGkiOiI2N2RmYjQ5MDVlNjc0YjUxYTQ5YThhZjJjMzVjMzZjNyIsInVzZXJfaWQiOjZ9.QvEq6HrIQ84k4pIeoD2thT_B3ZnBkvl5nYk4YkQbLJ8
+
+###
+# Petr Применение JWT - получение токена
+
+POST http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "Petr",
+    "password": "Qwerty@1"
+}
+
+###
+# Petr пример GET запроса с JWT-токеном
+GET http://127.0.0.1:8000/auth/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1NDQ2NzI4LCJqdGkiOiI0NTc4NmViZjcwYzk0ZTMyYjQ0ZDdiZWQ3ZGNlNzY3ZCIsInVzZXJfaWQiOjd9.jbhyDiaylenvtBUl4xA7CJuMR9GIK-xsZcpO4lw4UzY
+
+###
+# Применение JWT - получение токена
+
+POST http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "renzh",
+    "password": "Qwerty@1"
+}
+
+###
+# пример GET запроса
+
+GET http://127.0.0.1:8000/cats/
+
+###
+# пример GET запроса
+
+GET http://127.0.0.1:8000/users/
+
+###
+#пример GET запроса с JWT-токеном renzhinS
+GET http://127.0.0.1:8000/auth/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2MzQwNTk5LCJqdGkiOiJjN2UwZGExYzhjMmQ0NjQ2OTgxZmZjMjQ3ZGQ3NWZhZSIsInVzZXJfaWQiOjF9.WelILhdk2Vl49XqeeWDPB00Arh0VtALfjc6IUEhN4JI
+
+###
+#пример создания пользователя
+PATCH http://127.0.0.1:8000/auth/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2MzQwNTk5LCJqdGkiOiJjN2UwZGExYzhjMmQ0NjQ2OTgxZmZjMjQ3ZGQ3NWZhZSIsInVzZXJfaWQiOjF9.WelILhdk2Vl49XqeeWDPB00Arh0VtALfjc6IUEhN4JI
+Content-Type: application/json
+
+{
+    "email": "",
+    "username": "renzhin",
+    "first_name": "Михаил",
+    "last_name": "Ренжин",
+    "password": "Qwerty@1"
+} 
+
+###
+# #пример создания пользователя со всеми полями
+
+POST http://127.0.0.1:8000/auth/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1Mzg4NjYxLCJqdGkiOiI2ZjUyNWNhYTcyNDE0NTIzYTkxN2I0ZDIxNjM1Y2M1YSIsInVzZXJfaWQiOjF9.47zrSX6J-wviv6jwz3S8VgsxAAciKBFVZl9YDk_7zqs
+Content-Type: application/json
+
+{
+    "first_name": "Гога",
+    "last_name": "Пердежанский",
+    "username": "godzhi2",
+    "password": "Qwerty@1"
+}
+
+
+###
+# #пример создания пользователя со всеми полями
+
+POST http://127.0.0.1:8000/auth/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2MzQxNjIxLCJqdGkiOiJiZmVmYmQwYjI1OWI0NGQ0YmM4MTM3MTRkYWIyZjU0NCIsInVzZXJfaWQiOjJ9.BtzhfA2tuuTyQpKTdqtMnvR92qonO3f4XlzBCOT22Uw
+Content-Type: application/json
+
+{
+    "first_name": "Винни",
+    "last_name": "Пердежанский",
+    "username": "Vinni",
+    "password": "Qwerty@1"
+}
+
+###
+GET http://127.0.0.1:8000/cats/1/
+
+###
+
+POST http://127.0.0.1:8000/cats/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2MzQwNTk5LCJqdGkiOiJjN2UwZGExYzhjMmQ0NjQ2OTgxZmZjMjQ3ZGQ3NWZhZSIsInVzZXJfaWQiOjF9.WelILhdk2Vl49XqeeWDPB00Arh0VtALfjc6IUEhN4JI
+Content-Type: application/json
+
+{
+    "name": "Goga3",
+    "color": "Gray",
+    "birth_year": 2022,
+    "owner": 1
+} 
+
+###
+# Добавляем котика с HEX-овым цветом.
+POST http://127.0.0.1:8000/cats/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2MzQwNTk5LCJqdGkiOiJjN2UwZGExYzhjMmQ0NjQ2OTgxZmZjMjQ3ZGQ3NWZhZSIsInVzZXJfaWQiOjF9.WelILhdk2Vl49XqeeWDPB00Arh0VtALfjc6IUEhN4JI
+Content-Type: application/json
+
+{
+    "name": "Хёксик",
+    "color": "Black",
+    "birth_year": 2022,
+    "owner": 1
+} 
+
+
+###
+# Запрос на добавление кота с хозяином
+POST http://127.0.0.1:8000/cats/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2MzQwNTk5LCJqdGkiOiJjN2UwZGExYzhjMmQ0NjQ2OTgxZmZjMjQ3ZGQ3NWZhZSIsInVzZXJfaWQiOjF9.WelILhdk2Vl49XqeeWDPB00Arh0VtALfjc6IUEhN4JI
+Content-Type: application/json
+
+{
+    "name": "Барсик",
+    "color": "White",
+    "birth_year": 2017,
+    "owner": 2
+} 
+
+###
+# Запрос на добавление оунера
+POST http://127.0.0.1:8000/owners/
+Content-Type: application/json
+
+{
+    "first_name": "Hugo",
+    "last_name": "Basckerwill"
+} 
+
+###
+# ЗАгружаем пакетно, если serializer = CatSerializer(data=request.data, many=True)
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+[
+    {
+        "name": "Стёп2",
+        "color": "белый",
+        "birth_year": 1971
+    },
+    {
+        "name": "Мурка2",
+        "color": "рыжий",
+        "birth_year": 2010
+    },
+    {
+        "name": "Пушок2",
+        "color": "чёрный",
+        "birth_year": 2018
+    }
+] 
+
+###
+# работаем с обновлением объекта через cat_update
+POST http://127.0.0.1:8000/cat_update/1/
+Content-Type: application/json
+
+{
+    "name": "Pushok",
+    "color": "WhiteHouse",
+    "birth_year": 2019
+} 
+
+###
+# работаем с обновлением объекта через cat_patch
+PATCH http://127.0.0.1:8000/cats/1/
+Content-Type: application/json
+
+{
+    "color": "WhiteBlack"
+} 
