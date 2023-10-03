@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'djoser',
     'cats.apps.CatsConfig',
 ]
@@ -139,6 +140,9 @@ REST_FRAMEWORK = {
         # 'rest_framework.throttling.AnonRateThrottle',
         'rest_framework.throttling.ScopedRateThrottle',
     ],
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5,
     'DEFAULT_THROTTLE_RATES': {
         'user': '10000/day',  # Лимит для UserRateThrottle
         'anon': '1000/day',  # Лимит для AnonRateThrottle
